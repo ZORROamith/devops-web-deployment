@@ -1,0 +1,2 @@
+[webserver]
+13.238.255.27 ansible_user=ubuntu ansible_private_key_file=~/devops-key.pem

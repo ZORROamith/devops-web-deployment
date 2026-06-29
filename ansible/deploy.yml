@@ -1,0 +1,42 @@
+---
+- name: Deploy Docker Web Application
+  hosts: webserver
+  become: yes
+
+  tasks:
+
+    - name: Ensure Docker service is running
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+
+    - name: Pull Nginx Docker image
+      docker_image:
+        name: nginx
+        source: pull
+
+
+    - name: Copy website HTML file
+      copy:
+        src: ../index.html
+        dest: /tmp/index.html
+
+
+    - name: Remove old container if exists
+      docker_container:
+        name: devops-web
+        state: absent
+
+
+    - name: Run website container
+      docker_container:
+        name: devops-web
+        image: nginx
+        state: started
+        restart_policy: always
+        ports:
+          - "80:80"
+        volumes:
+          - /tmp/index.html:/usr/share/nginx/html/index.html
