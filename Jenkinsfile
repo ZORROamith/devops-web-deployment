@@ -14,9 +14,8 @@ pipeline {
         }
         stage('Deploy with Ansible') {
             steps {
-                // Run the playbook. 
-                // Ensure the path to your key is the exact path on your Jenkins EC2 server
-                sh 'ansible-playbook -i ansible/inventory ansible/deploy.yml --private-key /home/ubuntu/devops-key.pem'
+                // We add ANSIBLE_HOST_KEY_CHECKING=False to bypass the prompt
+                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ansible/inventory ansible/deploy.yml --private-key /home/ubuntu/devops-key.pem'
             }
         }
     }
