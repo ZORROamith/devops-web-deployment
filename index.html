@@ -2,17 +2,433 @@
 <html>
 
 <head>
-    <title>DevOps Project</title>
+
+<title>Amith AS | DevOps Engineer</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Courier New", monospace;
+}
+
+body{
+    background:#050816;
+    color:#e5e7eb;
+}
+
+
+header{
+
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+
+h1{
+
+font-size:55px;
+color:#38bdf8;
+
+}
+
+
+.typing{
+
+margin-top:20px;
+font-size:22px;
+color:#22c55e;
+
+}
+
+
+section{
+
+width:85%;
+margin:auto;
+padding:40px 0;
+
+}
+
+
+
+.terminal{
+
+background:#020617;
+border:1px solid #334155;
+border-radius:10px;
+padding:20px;
+margin:25px 0;
+
+box-shadow:0 0 20px #000;
+
+}
+
+
+.top{
+
+color:#22c55e;
+margin-bottom:15px;
+
+}
+
+
+.code{
+
+color:#94a3b8;
+line-height:1.8;
+
+}
+
+
+.card{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+
+.box{
+
+background:#111827;
+padding:25px;
+border-radius:10px;
+border:1px solid #1e293b;
+
+}
+
+
+.box:hover{
+
+border-color:#38bdf8;
+transform:translateY(-5px);
+
+}
+
+
+.skill{
+
+display:inline-block;
+padding:8px 12px;
+margin:5px;
+
+background:#1e293b;
+border-radius:5px;
+
+color:#38bdf8;
+
+}
+
+
+a{
+
+color:#22c55e;
+text-decoration:none;
+
+}
+
+
+footer{
+
+text-align:center;
+padding:30px;
+color:#64748b;
+
+}
+
+</style>
+
+
 </head>
+
+
 
 <body>
 
-<h1>Hello from Docker + AWS + Terraform + Ansible + Jenkins</h1>
+
+
+<header>
+
+
+<h1>
+Amith AS
+</h1>
+
+
+<div class="typing">
+
+> DevOps Engineer | Cloud | Networking | Automation_
+
+</div>
+
+
+</header>
+
+
+
+
+<section>
+
+
+<div class="terminal">
+
+<div class="top">
+amith@server:~$
+</div>
+
+
+<div class="code">
+
+
+$ whoami
+
+<br>
+
+Amith AS
+
+<br><br>
+
+
+$ cat role.txt
+
+<br>
+
+DevOps Engineer passionate about CI/CD,
+Cloud Infrastructure and Automation.
+
+
+<br><br>
+
+
+$ uptime
+
+<br>
+
+Building reliable systems 🚀
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="terminal">
+
+
+<div class="top">
+~/skills
+</div>
+
+
+<div>
+
+<span class="skill">AWS</span>
+<span class="skill">Docker</span>
+<span class="skill">Jenkins</span>
+<span class="skill">Linux</span>
+<span class="skill">Git</span>
+<span class="skill">CI/CD</span>
+<span class="skill">Terraform</span>
+<span class="skill">Cisco</span>
+<span class="skill">Python</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+Projects
+</h2>
+
+
+<div class="card">
+
+
+
+<div class="box">
+
+<h3>
+🚀 CI/CD Pipeline
+</h3>
+
+<br>
 
 <p>
-This website is deployed using DevOps automation.
+
+Jenkins pipeline deploying Docker containers automatically on AWS EC2.
+
 </p>
 
+</div>
+
+
+
+
+
+<div class="box">
+
+<h3>
+☁ Cloud Infrastructure
+</h3>
+
+<br>
+
+<p>
+
+Linux servers, networking, security groups and AWS deployments.
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="box">
+
+<h3>
+🌐 Network Engineering
+</h3>
+
+<br>
+
+<p>
+
+Cisco routing, switching, VLAN, OSPF, EIGRP and ACL configuration.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="terminal">
+
+
+<div class="top">
+
+deployment.sh
+
+</div>
+
+
+<div class="code">
+
+
+git clone portfolio.git
+
+<br>
+
+docker build -t amith-portfolio .
+
+<br>
+
+docker run -p 80:80 amith-portfolio
+
+
+<br><br>
+
+✔ Container Running
+
+<br>
+
+✔ CI/CD Successful
+
+<br>
+
+✔ Website Deployed
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="terminal">
+
+
+<div class="top">
+
+contact.txt
+
+</div>
+
+
+<p>
+
+GitHub:
+<a href="https://github.com/ZORROamith">
+github.com/ZORROamith
+</a>
+
+
+</p>
+
+
+<br>
+
+
+<p>
+
+Email:
+your-email@example.com
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 Amith AS | Built with Docker + Jenkins + AWS
+
+</footer>
+
+
+
 </body>
+
 
 </html>
