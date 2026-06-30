@@ -9,13 +9,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/ZORROamith/devops-web-deployment.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh '''
