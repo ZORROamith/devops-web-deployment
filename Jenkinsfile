@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/ZORROamith/devops-web-deployment.gi'
+                    url: 'https://github.com/ZORROamith/devops-web-deployment.git'
             }
         }
 
