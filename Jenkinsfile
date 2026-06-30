@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy with Ansible') {
             steps {
-                // We add ANSIBLE_HOST_KEY_CHECKING=False to bypass the prompt
+                // Ensure the path is exactly /home/ubuntu/devops-key.pem
                 sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ansible/inventory ansible/deploy.yml --private-key /home/ubuntu/devops-key.pem'
             }
         }
