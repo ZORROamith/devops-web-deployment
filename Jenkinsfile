@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy with Ansible') {
             steps {
-                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ansible/inventory ansible/deploy.yml --private-key /home/ubuntu/devops-key.pem'
+                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ansible/inventory ansible/deploy.yml --private-key /var/lib/jenkins/devops-key.pem'
             }
         }
     }
